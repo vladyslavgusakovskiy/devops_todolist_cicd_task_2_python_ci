@@ -10,6 +10,7 @@ import time
 
 startup_time = timezone.now()
 
+
 class IsCreatorOrReadOnly(permissions.BasePermission):
     """
     Object-level permission to only allow owners of an object to edit it.
@@ -60,9 +61,11 @@ class TodoViewSet(viewsets.ModelViewSet):
         creator = user if user.is_authenticated else None
         serializer.save(creator=creator)
 
+
 # Health Check View
 def health(request):
     return HttpResponse("Health OK", content_type="text/plain")
+
 
 # Readiness Check View
 def ready(request):
