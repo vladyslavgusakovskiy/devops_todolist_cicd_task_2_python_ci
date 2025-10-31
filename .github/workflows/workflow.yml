@@ -3,7 +3,7 @@ run-name: ${{ github.actor}} - ${{ github.ref_name}}
 
 on:
   push:
-    branches: ["main", "develop"]
+    branches: ["main", "develop", "develop2"]
   pull_request:
     branches: ["main"]
 
