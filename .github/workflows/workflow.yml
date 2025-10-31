@@ -37,6 +37,5 @@ jobs:
 
         - name: Run tests with coverage
           run: |
-            python ./src/manage.py test
             coverage run ./src/manage.py test
             coverage report -m
