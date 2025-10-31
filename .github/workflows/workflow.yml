@@ -1,0 +1,12 @@
+name: CI for Python app
+run-name: ${{ github.actor}} - ${{ github.ref_name}}
+
+on:
+  push:
+    branches: ["main", "develop"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+    python-ci:
+        runs-on: ubuntu-latest
